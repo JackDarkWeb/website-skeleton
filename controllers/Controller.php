@@ -48,7 +48,8 @@ class Controller
             $view = ROOT.DS.'views'.$view.'.php';
         }else{
 
-            $view = ROOT.DS.'views'.DS.$this->request->controller.DS.$view.'.php';
+            $trans_view = str_replace('.', DS, $view);
+            $view = ROOT.DS.'views'.DS.$trans_view.'.php';
         }
 
         ob_start();

@@ -4,6 +4,6 @@
 class HomeController extends Controller
 {
     function welcome(){
-        $this->render('welcome');
+        $this->render('home.welcome');
     }
 }
