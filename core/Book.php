@@ -214,7 +214,7 @@ class Book
      */
     public function cleaningString(string $var, string $list = null){
 
-        return ($list == null)? htmlspecialchars(trim($var)) : htmlspecialchars(trim($var, $list));
+        return ($list == null)? htmlspecialchars(trim($var), ENT_QUOTES, 'UTF-8', false) : htmlspecialchars(trim($var, $list), ENT_QUOTES, 'UTF-8', false);
     }
 
 
