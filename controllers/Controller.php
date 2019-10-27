@@ -23,6 +23,7 @@ class Controller
      */
     public function render($view, $data = []){
 
+        //var_dump($view);die();
         if(!$this->rendered){
 
             $this->make($view, $data);
@@ -37,20 +38,19 @@ class Controller
      */
     private function make($view, $data = []){
 
+        $trans_view = str_replace('.', DS, $view);
+
         foreach ($data as $key => $val){
             $this->vars[$key] = $val;
         }
         extract($this->vars);
 
-
         if(strpos($view, '/') === 0){
-
-            $view = ROOT.DS.'views'.$view.'.php';
+            $view = ROOT.DS.'views'.DS.$trans_view.'.php';
         }else{
-
-            $trans_view = str_replace('.', DS, $view);
             $view = ROOT.DS.'views'.DS.$trans_view.'.php';
         }
+
 
         ob_start();
 
@@ -65,8 +65,8 @@ class Controller
      * @param $message
      */
     function e404($message){
-        header('HTTP//1.0 404 not found');
-        $this->render('/errors/404', [
+        //header('HTTP//1.0 404 not found');
+        $this->render('.errors.404', [
             'message' => $message
         ]);
         die();

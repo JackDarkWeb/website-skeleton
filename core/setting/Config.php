@@ -20,4 +20,8 @@ class Config
             'password' => ''
         ]
     ];
+
+
 }
+
+//Router::connect('post/view/');

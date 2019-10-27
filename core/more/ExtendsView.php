@@ -6,9 +6,12 @@ class ExtendsView
 
     /**
      * @param $view
+     * @param array $data
      * @return false|string
      */
-    static function extend($view){
+    static function extend($view, $data = []){
+
+        extract($data);
 
         $view = ROOT.DS.'Views'.DS.'layout'.DS.$view.'.php';
 

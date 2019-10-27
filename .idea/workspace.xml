@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4a6930-0e8f-4631-bae4-9d87d5ec2429" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/more/CounterView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/more/debug.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/posts/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/posts/show.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/helpers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/helpers/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/includes.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/includes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/more/ExtendsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/more/ExtendsView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/setting/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/setting/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,22 +32,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Sj3vmsXtFpcwFO7T1lp9fz44vX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/helpers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core/more" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\website-skeleton\core" />
+      <recent name="D:\OSPanel\domains\website-skeleton" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\website-skeleton\core\more" />
       <recent name="D:\OSPanel\domains\website-skeleton\core\helpers" />
       <recent name="D:\OSPanel\domains\website-skeleton\core" />
       <recent name="D:\OSPanel\domains\website-skeleton\views" />
-      <recent name="D:\OSPanel\domains\website-skeleton" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\OSPanel\domains\website-skeleton\core" />
       <recent name="D:\OSPanel\domains\website-skeleton" />
     </key>
   </component>
@@ -65,6 +81,8 @@
       <workItem from="1572114204345" duration="603000" />
       <workItem from="1572117130422" duration="667000" />
       <workItem from="1572151328292" duration="633000" />
+      <workItem from="1572163587151" duration="169000" />
+      <workItem from="1572185980649" duration="15209000" />
     </task>
     <servers />
   </component>
