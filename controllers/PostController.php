@@ -7,17 +7,18 @@ class PostController extends Controller
 
         $post = new Post();
         $posts = $post->findAll();
+        //dd($posts);
 
         $this->render('posts.index',[
             'posts' => $posts,
         ]);
     }
 
-    function read($id = null){
+    function read($slug = null){
 
         //var_dump($id);
 
-        if($id === null){
+        if($slug === null){
 
             $post = new Post();
             $posts = $post->findAll();
@@ -29,11 +30,14 @@ class PostController extends Controller
         }else{
 
             $post = new Post();
-            $postId = $post->find(['id', '=', $id]);
 
-            if(!isset($postId)){
-                $this->e404("Product $id not found");
-            }
+            //dd($slug);
+            $postId = $post->find(['slug', '=', $slug]);
+
+
+            /*if(!isset($postId)){
+                $this->e404("Product  not found");
+            }*/
 
             $this->render('posts.show',[
                 'post' => $postId,

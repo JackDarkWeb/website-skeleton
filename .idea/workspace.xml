@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4a6930-0e8f-4631-bae4-9d87d5ec2429" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/more/CounterView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/more/debug.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/posts/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/posts/show.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/posts/read.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/helpers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/helpers/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/includes.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/includes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/more/ExtendsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/more/ExtendsView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/more/debug.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/more/debug.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/setting/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/setting/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/posts/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/posts/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +78,9 @@
       <workItem from="1572151328292" duration="633000" />
       <workItem from="1572163587151" duration="169000" />
       <workItem from="1572185980649" duration="15209000" />
+      <workItem from="1572204413393" duration="552000" />
+      <workItem from="1572230148446" duration="621000" />
+      <workItem from="1572292319410" duration="7172000" />
     </task>
     <servers />
   </component>

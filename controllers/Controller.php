@@ -65,7 +65,7 @@ class Controller
      * @param $message
      */
     function e404($message){
-        //header('HTTP//1.0 404 not found');
+        header('HTTP//1.0 404 not found');
         $this->render('.errors.404', [
             'message' => $message
         ]);
