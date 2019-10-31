@@ -49,20 +49,20 @@ class PostController extends Controller
 
     function store(){
 
-        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if($_POST['ajax'] == true || isset($_POST['submit'])) {
 
             $err = [];
             $name = $this->text('name');
 
             if ($this->success() === true) {
 
-                $err["success"] = $name;
+                $this->flash['message'] = 'Success';
             } else {
 
-                $err["error"] = $this->error('name');
+                $this->flash["message"] = $this->error('name');
             }
 
-            echo json_encode($err);
+            echo json_encode($this->flash);
             die();
         }
         //$this->render('posts.create');

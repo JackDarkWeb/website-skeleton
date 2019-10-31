@@ -13,7 +13,7 @@ class ExtendsView
 
         extract($data);
 
-        $view = ROOT.DS.'Views'.DS.'layout'.DS.$view.'.php';
+        $view = ROOT.DS.'views'.DS.'layouts'.DS.$view.'.php';
 
         ob_start();
         require $view;

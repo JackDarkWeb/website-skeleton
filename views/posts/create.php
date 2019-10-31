@@ -3,7 +3,7 @@
 <form method="post" action="/post/store" id="form-test">
     <input type="text" name="name" id="name"/>
     <?  echo $this->error('name');?>
-    <button type="submit">Send</button>
+    <button type="submit" name="submit">Send</button>
 </form>
 <div id="result"></div>
 <script>
@@ -17,6 +17,7 @@
             e.preventDefault();
 
             let name = encodeURIComponent($('#name').val());
+            let ajax = true;
            /* let json = {"name":name};
             let jsonString = JSON.stringify(json);
             let jsonParsed = JSON.parse(jsonString);*/
@@ -27,13 +28,11 @@
                 dataType: 'json',
                 async: true,
                 cache: false,
-                data: {name:name},
+                data: {name:name, ajax:ajax},
                 success:function (response, status, xhr) {
 
-                    if(response.success){
-                        $('#result').html(response.success);
-                    }else if(response.error){
-                        $('#result').html(response.error);
+                    if(response.message){
+                        $('#result').html(response.message);
                     }
 
                 },
