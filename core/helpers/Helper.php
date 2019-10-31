@@ -8,7 +8,7 @@ abstract class Helper
 
     function __construct()
     {
-        self::$page = $this->request->page;
+        //self::$page = $this->request->page;
     }
 
     /**
@@ -109,12 +109,14 @@ abstract class Helper
         return $out;
     }
 
-    /**
-     * @param $path
-     */
-    static function redirect($path){
-        $path = str_replace('.', DS, $path);
-        header('Location:'.$path);
+    static function slug($string):string {
+        $str = '';
+
+        if($string !== ''){
+            $str = explode(' ', $string);
+        }
+        return implode('-', $str);
     }
+
 
 }

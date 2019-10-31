@@ -14,34 +14,57 @@ class PostController extends Controller
         ]);
     }
 
-    function read($slug = null){
+    function read($id = null, $slug = null){
 
-        //var_dump($id);
+        $post = new Post();
 
-        if($slug === null){
+        if($slug == null || $id == null){
 
-            $post = new Post();
             $posts = $post->findAll();
-
-            $this->render('posts.index',[
+            $this->render('home.welcome',[
                 'posts' => $posts,
             ]);
-
-        }else{
-
-            $post = new Post();
-
-            //dd($slug);
-            $postId = $post->find(['slug', '=', $slug]);
-
-
-            /*if(!isset($postId)){
-                $this->e404("Product  not found");
-            }*/
-
-            $this->render('posts.show',[
-                'post' => $postId,
-            ]);
         }
+
+        $posts = $post->find(['id', '=', $id]);
+
+        /*if(!isset($posts)){
+            $this->e404("Product  not found");
+        }*/
+
+        if($slug !== $posts->slug){
+
+            //dd($posts->slug);die();
+            $this->redirect('post/read', ['id' => $id, 'slug' => $posts->slug], 301);
+        }
+
+        $this->render('posts.show',[
+            'post' => $posts,
+        ]);
+    }
+
+    function create(){
+        $this->render('posts.create');
+    }
+
+    function store(){
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $err = [];
+            $name = $this->text('name');
+
+            if ($this->success() === true) {
+
+                $err["success"] = $name;
+            } else {
+
+                $err["error"] = $this->error('name');
+            }
+
+            echo json_encode($err);
+            die();
+        }
+        //$this->render('posts.create');
     }
 }

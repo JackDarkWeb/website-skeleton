@@ -1,10 +1,11 @@
 <?php
 
 
-class Controller
+class Controller extends Validator
 {
     public $request;
     private $vars     = [],
+
 
         # Know If the view has already been rendered
         $rendered = false;
@@ -65,11 +66,19 @@ class Controller
      * @param $message
      */
     function e404($message){
-        header('HTTP//1.0 404 not found');
+        //header('HTTP//1.0 404 not found');
         $this->render('.errors.404', [
             'message' => $message
         ]);
         die();
+    }
+
+
+    function redirect($url, array $data, $status){
+        if($status == 301){
+            header('HTTP//1.0 301 Moved Permanently');
+        }
+        header('Location:'.Router::url($url, $data));
     }
 
     /**
