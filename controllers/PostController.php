@@ -9,7 +9,7 @@ class PostController extends Controller
         $posts = $post->findAll();
         //dd($posts);
 
-        $this->render('posts.index',[
+        $this->view('posts.index',[
             'posts' => $posts,
         ]);
     }
@@ -21,16 +21,16 @@ class PostController extends Controller
         if($slug == null || $id == null){
 
             $posts = $post->findAll();
-            $this->render('home.welcome',[
+            $this->view('home.welcome',[
                 'posts' => $posts,
             ]);
         }
 
         $posts = $post->find(['id', '=', $id]);
 
-        /*if(!isset($posts)){
+        if(!isset($posts)){
             $this->e404("Product  not found");
-        }*/
+        }
 
         if($slug !== $posts->slug){
 
@@ -38,13 +38,13 @@ class PostController extends Controller
             $this->redirect('post/read', ['id' => $id, 'slug' => $posts->slug], 301);
         }
 
-        $this->render('posts.show',[
+        $this->view('posts.show',[
             'post' => $posts,
         ]);
     }
 
     function create(){
-        $this->render('posts.create');
+        $this->view('posts.create');
     }
 
     function store(){
@@ -65,6 +65,6 @@ class PostController extends Controller
             echo json_encode($this->flash);
             die();
         }
-        //$this->render('posts.create');
+        //$this->view('posts.create');
     }
 }

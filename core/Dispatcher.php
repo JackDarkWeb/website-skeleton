@@ -28,7 +28,7 @@ class Dispatcher
         );
 
         # Render default
-        $controller->render($this->request->action);
+        $controller->view($this->request->action);
         //print_r($this->request);
     }
 

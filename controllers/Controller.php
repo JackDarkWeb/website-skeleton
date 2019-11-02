@@ -22,7 +22,7 @@ class Controller extends Validator
      * @param array $data
      * @return bool
      */
-    public function render($view, $data = []){
+    public function view($view, $data = []){
 
         //var_dump($view);die();
         if(!$this->rendered){
@@ -67,7 +67,7 @@ class Controller extends Validator
      */
     function e404($message){
         //header('HTTP//1.0 404 not found');
-        $this->render('.errors.404', [
+        $this->view('.errors.404', [
             'message' => $message
         ]);
         die();

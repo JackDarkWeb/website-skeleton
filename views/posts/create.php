@@ -18,9 +18,9 @@
 
             let name = encodeURIComponent($('#name').val());
             let ajax = true;
-           /* let json = {"name":name};
+            let json = {"name":name, "ajax":ajax};
             let jsonString = JSON.stringify(json);
-            let jsonParsed = JSON.parse(jsonString);*/
+            let jsonParsed = JSON.parse(jsonString);
 
             $.ajax({
                 url: '/post/store',
@@ -28,7 +28,7 @@
                 dataType: 'json',
                 async: true,
                 cache: false,
-                data: {name:name, ajax:ajax},
+                data: jsonParsed,
                 success:function (response, status, xhr) {
 
                     if(response.message){

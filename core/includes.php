@@ -19,6 +19,13 @@ require 'Dispatcher.php';
 require CORE.DS.'setting'.DS.'autoload.php';
 
 
+    echo "<div style='position:fixed; bottom:0; background:#900; color:#FFF; line-height:30px; height:30px; left:0; right:0 padding-left:10px;'>";
+
+        echo "Page generated in ".round(microtime(true) - $start, 5);
+
+    echo "</div>";
+
+
 
 
 
