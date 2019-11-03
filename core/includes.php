@@ -2,6 +2,7 @@
 $start = microtime(true);
 
 require CORE . DS . 'more' . DS . 'debug.php';
+require CORE . DS . 'more' . DS . 'assets.php';
 require 'Router.php';
 require CORE . DS . 'setting' . DS . 'Config.php';
 require CORE . DS . 'helpers' . DS . 'Helper.php';

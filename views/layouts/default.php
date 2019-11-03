@@ -7,7 +7,7 @@
     <title><?=isset($title)? $title : 'Website-skeleton'?></title>
 
     <!-- STYLES CSS -->
-    <? include 'pills/style.php'?>
+    <link rel="stylesheet" href="<?=assets('css.styles')?>"/>
 
 
     <!-- SCRIPTS JS -->
