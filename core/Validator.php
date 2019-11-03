@@ -32,7 +32,7 @@ class Validator extends Book
      */
     function preg_string(string $string){
 
-        $pattern = "/^-?[a-zA-Zéèêëíìîïñóòôöõúùûüýÿæ -\ ]+$/";
+        $pattern = "/^-?[a-zA-Zàçéèêëíìîïñóòôöõúùûüýÿæ -\ ]+$/";
         if(preg_match($pattern, $string) == 1){
 
             $msg = 1;

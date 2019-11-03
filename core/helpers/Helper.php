@@ -109,13 +109,20 @@ abstract class Helper
         return $out;
     }
 
+    /**
+     * @param $string
+     * @return string
+     */
     static function slug($string):string {
+
         $str = '';
+        $string = strtolower($string);
 
         if($string !== ''){
             $str = explode(' ', $string);
+            $str = implode('-', $str);
         }
-        return implode('-', $str);
+        return (str_replace("'", '-', $str));
     }
 
 
