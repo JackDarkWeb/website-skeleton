@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4a6930-0e8f-4631-bae4-9d87d5ec2429" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/more/assets.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/54-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/1646617.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/Entretien_Embauche_Blog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sean-pollock-PhYq704ffdA-unsplash.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/includes.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/includes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/more/assets.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/more/assets.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/home/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/pills/style.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/pills/style.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,16 +48,16 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\OSPanel\domains\website-skeleton\core" />
-      <recent name="D:\OSPanel\domains\website-skeleton" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\OSPanel\domains\website-skeleton\public\images" />
       <recent name="D:\OSPanel\domains\website-skeleton\core\setting" />
       <recent name="D:\OSPanel\domains\website-skeleton\core\more" />
       <recent name="D:\OSPanel\domains\website-skeleton\core\helpers" />
       <recent name="D:\OSPanel\domains\website-skeleton\core" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\website-skeleton\core" />
+      <recent name="D:\OSPanel\domains\website-skeleton" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -100,7 +97,8 @@
       <workItem from="1572406558046" duration="2052000" />
       <workItem from="1572467637671" duration="21152000" />
       <workItem from="1572639135592" duration="9718000" />
-      <workItem from="1572754697792" duration="6455000" />
+      <workItem from="1572754697792" duration="6730000" />
+      <workItem from="1572763085891" duration="3015000" />
     </task>
     <servers />
   </component>
