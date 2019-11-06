@@ -295,6 +295,22 @@ class Validator extends Book
 
     /**
      * @param $name
+     * @param $confirm_name
+     * @return bool
+     */
+    function password_confirm($name, $confirm_name){
+
+        $value = $this->post($confirm_name);
+        $confirm = sha1($value);
+
+        if($confirm === $this->password($name)){
+            return true;
+        }else
+            $this->errors[$confirm_name] = "Passwords are not same";
+    }
+
+    /**
+     * @param $name
      */
     public function remember($name){
         $value = $this->post($name);
@@ -307,14 +323,14 @@ class Validator extends Book
      * @param string $name
      * @return string
      */
-    public function file(string $name){
+    public function upload_file(string $name){
 
-        $files = $this->files($name);
+        $file = $this->files($name);
 
         $extensions = ['png', 'jpeg', 'jpg', 'gif'];
 
-        $file_name = $files["name"];
-        $file_error = $files['error'];
+        $file_name = $file["name"];
+        $file_error = $file['error'];
 
         if($file_error === 0  && strlen($file_name) > 0){
 
@@ -323,22 +339,24 @@ class Validator extends Book
 
             if(in_array($extension, $extensions)){
 
-                $file_size = $files['size'];
+                $file_size = $file['size'];
                 if($file_size <= 3200000){
 
                     $new_name = strtolower($this->alphaNumCode(3).'.'.$extension);
-                    $tmp_name = $files['tmp_name'];
+                    $new_name_db = strtolower($this->alphaNumCode(3));
+
+                    $tmp_name = $file['tmp_name'];
 
                     //create the storage location of the files
-                    $stone = "storage";
+                    $stone = PUBLIC_FOLDER.DS."storage";
                     if(!is_dir($stone)){
                         mkdir($stone);
                     }
-                    $storage = $stone."/".$new_name;
+                    $storage = $stone.DS.$new_name;
 
-                    if(move_uploaded_file($tmp_name, $storage) == TRUE){
+                    if(move_uploaded_file($tmp_name, $storage)){
 
-                        return $new_name;
+                        return $new_name_db;
 
                         //return "The file has been downloaded successfully";
                     }else{
@@ -360,6 +378,171 @@ class Validator extends Book
 
     }
 
+    function upload_multiple_files(string $name){
+
+        $files = $this->files($name);
+
+
+
+        if(!empty($files['name'][0])){
+
+            $file_names  = $files['name'];
+
+            $extensions      = ['png', 'jpeg', 'jpg', 'gif', 'pdf', 'doc', 'txt'];
+            $file_extensions = [];
+
+            foreach ($file_names as $file_name){
+
+
+                $file_extension_tmp    = explode('.', $file_name);
+                $file_extensions[]     = strtolower(end($file_extension_tmp));
+            }
+
+            $file_sizes   = $files['size'];
+            $sizes = [];
+
+            foreach ($file_sizes as $file_size){
+                $sizes[] = $file_size;
+            }
+
+            $file_errors = $files['error'];
+            $f_errors    = [];
+
+            foreach ($file_errors as $file_error){
+                $f_errors[] = $file_error;
+            }
+
+            $tmp_files    = $files['tmp_name'];
+            $tmp_fs       = [];
+            $new_file_names = [];
+
+            foreach ($tmp_files as $tmp_file){
+
+                $tmp_fs[] = $tmp_file;
+
+                $new_file_names[]    = strtolower($this->alphaNumCode(3));
+            }
+
+            //return $tmp_fs;
+
+            // $sizes;
+            $storage = [];
+            foreach ($file_names as $position => $file_name){
+
+                if(in_array($file_extensions[$position], $extensions)){
+
+                    if($f_errors[$position] === 0){
+
+                        //$re[] = $f_errors[$position];
+
+                        if($sizes[$position] <= 3200000){
+
+                            //create the storage location of the files
+                            $stone = PUBLIC_FOLDER.DS."storage";
+                            if(!is_dir($stone)){
+                                mkdir($stone);
+                            }
+
+                            $storage[] = $stone.DS.$new_file_names[$position].'.'.$file_extensions[$position];
+
+
+
+                            if(move_uploaded_file($tmp_fs[$position], $storage[$position])){
+
+                                return $new_file_names;
+
+                                //return "The file has been downloaded successfully";
+                            }else{
+
+                                if(!empty($file_name))
+                                    $this->errors[$name.$position] = "<strong>$file_name</strong>  was a problem uploading";
+                            }
+
+
+                        }else{
+
+                            if(!empty($file_name))
+                                $this->errors[$name.$position] = "<strong>$file_name</strong>   exceeds <span style='color: red'>32 Mo</span>";
+                        }
+
+                    }else{
+
+                        if(!empty($file_name))
+                            $this->errors[$name.$position] = "<strong>$file_name</strong>  errored with code  <span style='color: red'>$file_error</span> ";
+                    }
+
+
+                }else{
+
+                    if(!empty($file_name))
+                        $this->errors[$name.$position] = "<strong>$file_name</strong>  file extension  <span style='color: red'>$file_extensions[$position]</span> is not allowed";
+                }
+            }
+
+
+
+            /*die();
+
+            foreach ($file_names as $position => $file_name){
+
+                $file_error  = $files['error'][$position];
+                $file_tmp    = $files['tmp_name'][$position];
+                $file_size   = $files['size'][$position];
+
+
+
+                if(in_array($file_extension, $extensions)){
+
+                    if($file_error === 0){
+                        $t = [];
+                        if($file_size <= 3200000){
+
+                            $new_file_name    = strtolower($this->alphaNumCode(3).'.'.$file_extension);
+                            $new_file_name_db = strtolower($this->alphaNumCode(3));
+
+                            return $t[] = $new_file_name;
+                            //create the storage location of the files
+                            $stone = PUBLIC_FOLDER.DS."storage";
+                            if(!is_dir($stone)){
+                                mkdir($stone);
+                            }
+
+                            $storage = $stone.DS.$new_file_name;
+
+                            if(move_uploaded_file($file_tmp, $storage)){
+
+                                return $new_file_name_db;
+
+                                //return "The file has been downloaded successfully";
+                            }else{
+
+                                if(!empty($file_name))
+                                $this->errors[$name.$position] = "<strong>$file_name</strong>  was a problem uploading";
+                            }
+
+                        }else{
+
+                            if(!empty($file_name))
+                                $this->errors[$name.$position] = "<strong>$file_name</strong>   exceeds <span style='color: red'>32 Mo</span>";
+                        }
+
+                    }else{
+
+                        if(!empty($file_name))
+                            $this->errors[$name.$position] = "<strong>$file_name</strong>  errored with code  <span style='color: red'>$file_error</span> ";
+                    }
+
+                }else{
+
+                    if(!empty($file_name))
+                     $this->errors[$name.$position] = "<strong>$file_name</strong>  file extension  <span style='color: red'>$file_extension</span> is not allowed";
+                }
+
+            }*/
+
+        }else
+            $this->errors[$name] = 'Select your file';
+    }
 
     /**
      * @param string $name
@@ -391,7 +574,7 @@ class Validator extends Book
      */
     public function error(string $name){
 
-        if(isset($this->errors[$name])) return $this->errors[$name];
+        if(isset($this->errors[$name]) && !empty($this->errors[$name])) return $this->errors[$name];
     }
 
     /**

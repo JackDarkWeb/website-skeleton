@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?=isset($title)? $title : 'Website-skeleton'?></title>
+    <title><?=isset($title_for_site)? $title_for_site : 'Website-skeleton'?></title>
 
     <!-- STYLES CSS -->
     <link rel="stylesheet" href="<?=assets('css.styles')?>"/>

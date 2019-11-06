@@ -1,6 +1,6 @@
 <?php
 
-function dd($var){
+function dump($var){
 
     $debug = debug_backtrace();
     echo "<a href='#' onClick='$(this).parent().next(\"ol\").slideToggle(); return false;'><strong>{$debug[0]['file']}</strong> line {$debug[0]['line']}</a>";
@@ -17,6 +17,10 @@ function dd($var){
     echo "<pre>";
         print_r($var);
     echo "</pre>";
+}
 
-    //die();
+function dd($var){
+
+    dump($var);
+    die();
 }

@@ -34,7 +34,7 @@ class PostController extends Controller
 
         if($slug !== $posts->slug){
 
-            //dd($posts->slug);die();
+            //dd($posts->slug);
             $this->redirect('post/read', ['id' => $id, 'slug' => $posts->slug], 301);
         }
 
@@ -62,9 +62,16 @@ class PostController extends Controller
                 $this->flash["message"] = $this->error('name');
             }
 
-            echo json_encode($this->flash);
-            die();
+            if ($_POST['ajax'] === 'true'){
+
+                echo json_encode($this->flash);
+                die();
+
+            }else{
+                return $this->view('posts.create');
+            }
+
         }
-        //$this->view('posts.create');
+        $this->view('posts.create');
     }
 }

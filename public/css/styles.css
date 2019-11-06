@@ -5,3 +5,11 @@ body{
 .welcome{
     color: deepskyblue;
 }
+
+#search-section ul{
+    position: absolute;
+    z-index: 100;
+}
+#search-section ul li{
+    padding: 7px;
+}

@@ -9,6 +9,8 @@ function assets($file){
     $file = str_replace('.', DS, $file);
     $detach = explode(DS, $file);
 
+
+
     if(sizeof($detach) >= 2){
 
         $folder   = $detach[0];
@@ -42,10 +44,10 @@ function assets($file){
            if(in_array($file, $files))
                return DS.'public'.DS.$folder.DS.$file;
            else
-               return DS.'public'.DS.$file;
+               return DS.'public'.DS.$file.'.'.$folder;
 
         }else
-            return 'false';
+            return DS.'public'.DS.$tmp_file.'.css';
     }
     return false;
 }

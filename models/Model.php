@@ -114,7 +114,27 @@ abstract class Model extends Db
     }
 
 
+    /**
+     * @param $action
+     * @param $table
+     * @param $where
+     * @param $like
+     * @return $this
+     */
+    private function actionLike($action, $table, $where, $like){
 
+        $sql = "{$action} FROM {$table} WHERE {$where} LIKE '%{$like}%'";
+        if(!$this->query($sql, [])->error()){
+
+            return $this;
+        }
+    }
+
+    function search($where, $like){
+        $like = trim($like);
+        return $this->actionLike('SELECT *', $this->table, $where, $like)
+            ->results();
+    }
 
 
 
