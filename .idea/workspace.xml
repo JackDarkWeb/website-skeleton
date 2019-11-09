@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f4a6930-0e8f-4631-bae4-9d87d5ec2429" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1f4a6930-0e8f-4631-bae4-9d87d5ec2429" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,17 +45,17 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\OSPanel\domains\website-skeleton\core\helpers" />
-      <recent name="D:\OSPanel\domains\website-skeleton\public\js" />
-      <recent name="D:\OSPanel\domains\website-skeleton\public\images" />
-      <recent name="D:\OSPanel\domains\website-skeleton\core\setting" />
-      <recent name="D:\OSPanel\domains\website-skeleton\core\more" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\OSPanel\domains\website-skeleton\views\posts" />
       <recent name="D:\OSPanel\domains\website-skeleton\core" />
       <recent name="D:\OSPanel\domains\website-skeleton" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\website-skeleton\core" />
+      <recent name="D:\OSPanel\domains\website-skeleton\core\helpers" />
+      <recent name="D:\OSPanel\domains\website-skeleton\public\js" />
+      <recent name="D:\OSPanel\domains\website-skeleton\public\images" />
+      <recent name="D:\OSPanel\domains\website-skeleton\core\setting" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -109,6 +106,7 @@
       <workItem from="1573035258722" duration="230000" />
       <workItem from="1573048285006" duration="1007000" />
       <workItem from="1573056372184" duration="36000" />
+      <workItem from="1573289371244" duration="178000" />
     </task>
     <servers />
   </component>
