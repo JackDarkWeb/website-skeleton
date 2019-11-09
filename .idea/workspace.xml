@@ -39,7 +39,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -107,6 +107,7 @@
       <workItem from="1573048285006" duration="1007000" />
       <workItem from="1573056372184" duration="36000" />
       <workItem from="1573289371244" duration="178000" />
+      <workItem from="1573290122431" duration="59000" />
     </task>
     <servers />
   </component>
