@@ -74,7 +74,7 @@ class Validator extends Book
      * @param string $name
      * @return string
      */
-    public function post(string $name){
+    protected function post(string $name){
 
         if(isset($_POST[$name])) return $this->cleaningString($_POST[$name]);
     }
@@ -608,6 +608,11 @@ class Validator extends Book
         }
 
     }
+
+   public function old($name){
+     
+      return $this->post($name);
+   }
 
 
     /**
