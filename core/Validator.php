@@ -5,6 +5,9 @@ use http\Cookie;
 
 class Validator extends Book
 {
+    use CalculateAge;
+
+
     protected $errors =  array();
     public $flash = array();
     public $months  = [1 => "Janvier", "Février",  "Mars",  "Avril", "Mai", "Juin",  "Juillet", "Août",  "Septembre", "Octobre", "Novembre", "Décembre"];
@@ -311,12 +314,15 @@ class Validator extends Book
 
     /**
      * @param $name
+     * @return bool
      */
     public function remember($name){
         $value = $this->post($name);
+
         if($value == 1){
-            setcookie('remember', 'true', time() + 3600);
+            return true;
         }
+        return false;
     }
 
     /**

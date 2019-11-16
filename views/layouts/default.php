@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?= isset($title_for_site)? $title_for_site : 'Management Consulting Int'?></title>
+    <title><?= isset($title_for_site)? $title_for_site : 'Babor Meeting'?></title>
 
     <!-- STYLES CSS -->
     <link rel="stylesheet" href="<?=assets('css.styles')?>"/>
